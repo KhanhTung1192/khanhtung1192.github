@@ -19,7 +19,8 @@ const Form = () => {
       num1: 0,
       num2: 0,
     });
-  
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+
     useEffect(() => {
       generateCaptcha();
     }, []);
@@ -47,9 +48,13 @@ const Form = () => {
       } else {
         // Xử lý dữ liệu form ở đây
         console.log(formData);
+        setShowSuccessPopup(true); // Hiển thị popup thành công
+
       }
     };
-  
+    const handleClosePopup = () => {
+      setShowSuccessPopup(false);}
+
     return (
       <div className="row justify-content-center event8">
         
@@ -206,10 +211,20 @@ const Form = () => {
               </button>
             </div>
           </form>
+          {showSuccessPopup && (
+                <div className="popup">
+                    <div className="popup-content">
+                      <div className="popup-overlay">
+                        <h2>Gửi yêu cầu thành công</h2>
+                        <button onClick={handleClosePopup}>Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
       </div>
     );
-  };
+  }
+
   
   export default Form;
-  
