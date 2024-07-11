@@ -14,6 +14,12 @@ const Form = () => {
       agree: false,
       captchaInput: "",
     });
+
+    const [errors, setErrors] = useState({
+      email: "",
+      phone: "",
+      captcha: ""
+    });
   
     const [captcha, setCaptcha] = useState({
       num1: 0,
@@ -37,29 +43,65 @@ const Form = () => {
         ...formData,
         [name]: type === "checkbox" ? checked : value,
       });
+      setErrors({
+        ...errors,
+        [name]: ""
+      });
+    };
+  
+    const validateEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    };
+
+    const validatePhone = (phone) => {
+      const re = /^\+?\d{10,14}$/;
+      return re.test(phone);
     };
   
     const handleSubmit = (e) => {
       e.preventDefault();
+      let valid = true;
       const captchaAnswer = captcha.num1 + captcha.num2;
-      if (parseInt(formData.captchaInput) !== captchaAnswer) {
-        alert("Captcha không đúng!");
-        generateCaptcha();
-      } else {
-        // Xử lý dữ liệu form ở đây
-        console.log(formData);
-        setShowSuccessPopup(true); // Hiển thị popup thành công
 
+      if (!validateEmail(formData.email)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          email: "Invalid email format",
+        }));
+        valid = false;
+      }
+
+      if (!validatePhone(formData.phone)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          phone: "Invalid phone number format",
+        }));
+        valid = false;
+      }
+
+      if (parseInt(formData.captchaInput) !== captchaAnswer) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          captcha: "Captcha không đúng!",
+        }));
+        generateCaptcha();
+        valid = false;
+      }
+
+      if (valid) {
+        console.log(formData);
+        setShowSuccessPopup(true);
       }
     };
+
     const handleClosePopup = () => {
-      setShowSuccessPopup(false);}
+      setShowSuccessPopup(false);
+    }
 
     return (
       <div className="row justify-content-center event8">
-        
         <div id='event8form' className="col-10">
-
           <form onSubmit={handleSubmit} className="form-container">
             <div className="Customerinformation">
               <p>
@@ -92,6 +134,7 @@ const Form = () => {
                   (option) => (
                     <label key={option}>
                       <input
+                        className="hidden"
                         type="radio"
                         name="foundUs"
                         value={option}
@@ -136,6 +179,7 @@ const Form = () => {
                 value={formData.email}
                 onChange={handleChange}
               />
+              {errors.email && <div className="error">{errors.email}</div>}
             </div>
             <div className="CustomerPhone">
               <p>
@@ -154,6 +198,7 @@ const Form = () => {
                 value={formData.phone}
                 onChange={handleChange}
               />
+              {errors.phone && <div className="error">{errors.phone}</div>}
             </div>
             <div className="CustomerProject">
               <p>
@@ -189,6 +234,7 @@ const Form = () => {
                     onChange={handleChange}
                   />
                 </label>
+                {errors.captcha && <div className="error">{errors.captcha}</div>}
               </div>
               <button
                 type="submit"
@@ -204,7 +250,7 @@ const Form = () => {
                   viewBox="0 0 16 16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"
                   />
                 </svg>
@@ -212,19 +258,17 @@ const Form = () => {
             </div>
           </form>
           {showSuccessPopup && (
-                <div className="popup">
-                    <div className="popup-content">
-                      <div className="popup-overlay">
-                        <h2>Gửi yêu cầu thành công</h2>
-                        <button onClick={handleClosePopup}>Đóng</button>
-                        </div>
-                    </div>
-                </div>
-            )}
+            <div className="popup">
+              <div className="popup-content">
+                <span className="close" onClick={handleClosePopup}>&times;</span>
+                <h2>Gửi yêu cầu thành công</h2>
+                <button onClick={handleClosePopup}>Đóng</button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
-  }
+}
 
-  
-  export default Form;
+export default Form;
