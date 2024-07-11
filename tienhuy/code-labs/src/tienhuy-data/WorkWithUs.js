@@ -8,6 +8,7 @@ import Review from './review';
 import Process from './process';
 import { processes } from './data-process';
 import '../BTnhom-phancuavuong/cauvong.css';
+import Form from '../BTnhom-phancuavuong/event8';
 
 function Workwithus () {
     const stars = Array.from({ length:5}, (_,index) => (
@@ -112,6 +113,7 @@ function Workwithus () {
           </div>
       </div>
      </div>
+     <Form />
      </div>
      </>
   );
