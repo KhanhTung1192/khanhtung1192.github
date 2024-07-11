@@ -6,20 +6,18 @@ body{
     color: rgb(255 255 255 / var(--tw-text-opacity));
     /* overflow-x: hidden; */
 }
-.container{
-    width: 100%;
-}
 .bg-radient{
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 80px 0;
     /* background: rgb(2,0,36);
 background: linear-gradient(198deg, rgba(2,0,36,1) 0%, rgba(62,97,200,1) 35%, rgba(130,10,170,1) 100%); */
-background: rgb(64,91,168);
-background: linear-gradient(84deg, rgba(64,91,168,1) 0%, rgba(11,15,28,1) 49%, rgba(103,31,128,1) 100%);
+/* background: rgb(64,91,168);
+background: linear-gradient(84deg, rgba(64,91,168,1) 0%, rgba(11,15,28,1) 49%, rgba(103,31,128,1) 100%); */
 }
 #intro{
     text-align: center;
-    
+    position: relative;
+    /* z-index: 3; */
 }
 #intro h5{
     /* margin-top: 30px; */
@@ -44,7 +42,7 @@ background: linear-gradient(84deg, rgba(64,91,168,1) 0%, rgba(11,15,28,1) 49%, r
 #approach{
     margin-top: 120px ;
     text-align: center;
-    
+    position: relative;
 }
 #approach-item{
     margin-top: 80px;
@@ -71,6 +69,7 @@ background: linear-gradient(84deg, rgba(64,91,168,1) 0%, rgba(11,15,28,1) 49%, r
     text-wrap: nowrap;
 }
 #featured {
+    position: relative;
     /* text-align: center; */
     /* display: flex; */
     /* flex-direction: row; */

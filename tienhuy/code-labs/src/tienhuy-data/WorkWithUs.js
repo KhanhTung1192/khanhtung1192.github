@@ -7,6 +7,7 @@ import { reviews } from './data-review';
 import Review from './review';
 import Process from './process';
 import { processes } from './data-process';
+import '../BTnhom-phancuavuong/cauvong.css';
 
 function Workwithus () {
     const stars = Array.from({ length:5}, (_,index) => (
@@ -19,6 +20,18 @@ function Workwithus () {
     <>
     <div className='bg-radient'>
     <div className='container' id='work-with-us' >
+    <div className="text-center col-10">
+            <div className="mau1"></div>
+            <div className="mau2"></div>
+            <div className="mau3"></div>
+            <div className="mau4"></div>
+            <div className="mau5"></div>
+            <div className="mau6"></div>
+            <div className="mau7"></div>
+            <div className="mau8"></div>
+            <div className="mau9"></div>
+          </div>
+
       <div id='intro'>
       <h5>WORK WITH US</h5>
       <h1>You name it, <span>we've done worse.</span></h1>
