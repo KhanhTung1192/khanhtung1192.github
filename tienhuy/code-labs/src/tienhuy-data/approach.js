@@ -1,4 +1,5 @@
 
+
 function Approach({title,content}){
     return(
         <div className='col-md-6 text-start' id='approach-item' >
@@ -9,5 +10,7 @@ function Approach({title,content}){
         </div>
     );
 }
+
+
 
 export default Approach;
