@@ -1,6 +1,6 @@
 import React from "react";
-import "../staff.css";
-import "../cauvong.css";
+import "../../Fox-code/phancuavuong/staff.css";
+import "../../Fox-code/phancuavuong/cauvong.css";
 import "./HomePage.css";
 import { Container, Row, Col } from "react-bootstrap";
 

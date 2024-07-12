@@ -1,6 +1,6 @@
 import React from "react";
-import "../staff.css";
-import "../cauvong.css";
+import "../../Fox-code/phancuavuong/staff.css"
+import "../../Fox-code/phancuavuong/cauvong.css";
 import Event1 from "./event1";
 
 function Index() {
