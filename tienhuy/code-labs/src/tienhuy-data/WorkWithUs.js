@@ -7,8 +7,11 @@ import { reviews } from './data-review';
 import Review from './review';
 import Process from './process';
 import { processes } from './data-process';
-import '../BTnhom-phancuavuong/cauvong.css';
-import Form from '../BTnhom-phancuavuong/event8';
+import './cauvong.css';
+import Form from './event8';
+import './huy.css';
+import Header from './Header';
+import Footer from './Footer';
 
 function Workwithus () {
     const stars = Array.from({ length:5}, (_,index) => (
@@ -19,6 +22,7 @@ function Workwithus () {
      
   return (
     <>
+    <Header />
     <div className='bg-radient'>
     <div className='container' id='work-with-us' >
     <div className="text-center col-10">
@@ -82,6 +86,7 @@ function Workwithus () {
         
           <div className='border-fade steps step1'>
             <h1>Step 1</h1>
+            <span class="connector"></span>
           </div>
         
         <div className='col-md-5 text-start process-right' >
@@ -115,6 +120,7 @@ function Workwithus () {
      </div>
      <Form />
      </div>
+     <Footer />
      </>
   );
       
