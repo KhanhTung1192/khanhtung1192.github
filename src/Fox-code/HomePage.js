@@ -1,10 +1,10 @@
 import React from "react";
 import './phancuavuong/staff.css';
 import './phancuavuong/cauvong.css';
+import './styles/HomePage.css';
 import { Navbar, Nav, NavDropdown, Button, Container } from 'react-bootstrap';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import './styles/HomePage.css';
 
 
 function Index() {

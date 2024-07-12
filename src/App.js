@@ -1,23 +1,23 @@
-import logo from "./views/logo.svg";
-import "./views/App.scss";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Staff from './Fox-code/staff';
+import Run1 from './Fox-code/run1';
+import Index from './Fox-code/HomePage';
+import Workwithus from './Fox-code/tienhuy-data/WorkWithUs';
+import AboutUs from './Fox-code/aboutus';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Staff /> */}
+      <Routes>
+        <Route path="/HomePage" element={<Index />} />
+        <Route path="/staff" element={<Staff />} />
+        <Route path="/run1" element={<Run1 />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/WorkWithUs" element={<Workwithus />} />
+      </Routes>
     </div>
   );
 }
