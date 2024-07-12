@@ -4,6 +4,7 @@ import './phancuavuong/cauvong.css';
 import { Navbar, Nav, NavDropdown, Button, Container } from 'react-bootstrap';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import './styles/HomePage.css';
 
 
 function Index() {
