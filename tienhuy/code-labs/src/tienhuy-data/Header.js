@@ -1,29 +1,32 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Button, Container } from 'react-bootstrap';
-
+// import { Link } from 'react-router-dom';
+import logo from './img/logoFoxcode.png';
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
 
 const Header = () => {
-    
+    const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+      };
     return (
         <section>
             <Navbar variant="dark" expand="lg" className="custom-navbar">
                 <Container>
-                    <Navbar.Brand href="#home">C/</Navbar.Brand>
+                    <Navbar.Brand className='LOGO' href="/HomePage"><img src={logo} alt='logo' /></Navbar.Brand>
                     <Navbar.Toggle className="navButton" aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto mx-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#services">Services</Nav.Link>
-                            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+                            <Nav.Link href="/HomePage">Home</Nav.Link>
+                            <Nav.Link href="/staff">Services</Nav.Link>
+                            <Nav.Link href="/run1">Portfolio</Nav.Link>
                             <Nav.Link href="#aboutUs">About us</Nav.Link>
-                            <Nav.Link href="#workWithUs">Work with us</Nav.Link>
+                            <Nav.Link href="/Workwithus">Work with us</Nav.Link>
                         </Nav>
                         <div className="row justify-content-center">
                             <button
                                 className="button "
-                                // onClick={() => scrollToSection("event8form")}
+                                onClick={() => scrollToSection("foot")}
                             >
                                 <span className="message text-center">Contact us</span>
                                 <svg

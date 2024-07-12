@@ -1,10 +1,14 @@
+img{
+    width: 13rem;
+}
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.142);
+    background-color: rgba(0, 0, 0, 0.438);
     opacity: 0.95;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+    backdrop-filter: blur(50px);
 }
 .navbar-brand {
     color: white;
@@ -68,16 +72,4 @@
 
 .navbar-toggle-icon {
     background-color: #fff !important;
-}
-
-@keyframes fade-up {
-    from {
-        transform: translateY(10%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
