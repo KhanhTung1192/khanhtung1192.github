@@ -260,9 +260,11 @@ const Form = () => {
           {showSuccessPopup && (
             <div className="popup">
               <div className="popup-content">
+                <div className='popup-overlay'>
                 <span className="close" onClick={handleClosePopup}>&times;</span>
                 <h2>Gửi yêu cầu thành công</h2>
                 <button onClick={handleClosePopup}>Đóng</button>
+              </div>
               </div>
             </div>
           )}

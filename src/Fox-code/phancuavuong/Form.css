@@ -8,6 +8,10 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.error {
+    color: red;
+    font-size: 14px;
+  }
 .Customerinformation p{
     font-size: clamp(1rem, 1.5vw, 10rem);
     display: inline-block;
@@ -26,7 +30,9 @@
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
-
+/* .hidden{
+    display: none;
+} */
 .luachon p{
     font-size: clamp(1rem, 1.5vw, 10rem);
     display: inline-block;
@@ -159,11 +165,12 @@
 
 }
 .popup-overlay{
-    background: rgb(255, 255, 255); /* Làm tối màn hình */
+    background: rgb(255, 255, 255);
     height: 15rem;
+    width: 25rem;
     position: fixed;
     top: 15rem;
-    left: 0;
+    left: 36%;
     right: 0;
 
 }
@@ -196,4 +203,8 @@
 
 .popup-content button:hover {
     background: #0056b3;
+}
+
+.checkbox-group a{
+    color: black;
 }

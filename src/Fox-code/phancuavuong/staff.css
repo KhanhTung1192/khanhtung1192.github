@@ -248,7 +248,13 @@
     animation-delay: 100ms;
     animation-fill-mode: forwards;
 }
-
+.event6{
+    opacity: 0;
+    animation-name: fade-up;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-fill-mode: forwards;
+}
 .event6 .h1text {
     /* margin: 0 0 0 18rem; */
     padding-top: 5rem;
@@ -256,11 +262,7 @@
     font-size: clamp(2.5rem, 4vw, 10rem);
     line-height: clamp(2.5rem, 4vw, 10rem);
     color: white;
-    opacity: 0;
-    animation-name: fade-up;
-    animation-duration: 3s;
-    animation-delay: 100ms;
-    animation-fill-mode: forwards;
+
 }
 
 .event6 strong {
@@ -274,20 +276,18 @@
 .event6 .event6p {
     margin-left: clamp(0rem, 6vw, 10rem);
     margin-right: clamp(0rem, 6vw, 10rem);
-
     font-size: clamp(1rem, 1.7vw, 10rem);
     color: white;
-    opacity: 0;
-    animation-name: fade-up;
-    animation-duration: 3s;
-    animation-delay: 100ms;
-    animation-fill-mode: forwards;
 }
 
 .event7 {
     margin-left: clamp(1rem, 4vw, 10rem);
     margin-right: clamp(1rem, 4vw, 10rem);
-
+    opacity: 0;
+    animation-name: fade-up;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-fill-mode: forwards;
 }
 
 /* .event7 .left{
@@ -309,11 +309,7 @@
     width: clamp(23rem, 40vw, 100rem);
     margin-left: clamp(1rem, 2vw, 10rem);
     margin-right: clamp(1rem, 2vw, 10rem);
-    opacity: 0;
-    animation-name: fade-up;
-    animation-duration: 3s;
-    animation-delay: 100ms;
-    animation-fill-mode: forwards;
+
 
 }
 
@@ -389,7 +385,6 @@
     width: clamp(25rem, 42vw, 100rem);
     display: inline-block;
     opacity: 0;
-
     animation-name: fade-left;
     animation-duration: 3s;
     animation-delay: 100ms;
