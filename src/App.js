@@ -1,25 +1,17 @@
-import logo from "./views/logo.svg";
-import "./views/App.scss";
+import Staff from "./BTnhom-phancuavuong/staff";
+import Index from "./BTnhom-phancuavuong/index/HomePage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            {/* <Staff /> */}
+            {/* <Header /> */}
+            <Index />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

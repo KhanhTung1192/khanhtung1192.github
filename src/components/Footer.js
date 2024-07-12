@@ -1,9 +1,8 @@
 import React from "react";
-import "./staff.css";
-import "./cauvong.css";
-import Header from "../components/Header";
+import "../BTnhom-phancuavuong/staff.css";
+import "../BTnhom-phancuavuong/cauvong.css";
 
-function Event1() {
+function Footer() {
     const scrollToSection = (sectionId) => {
         document
             .getElementById(sectionId)
@@ -24,7 +23,6 @@ function Event1() {
                     <div className="mau9"></div>
                 </div>
             </div>
-            <Header />
             
             <div className="row justify-content-center event1">
                 <div className="text-center col-10">
@@ -66,4 +64,4 @@ function Event1() {
         </section>
     );
 }
-export default Event1;
+export default Footer;

@@ -34,9 +34,11 @@
     }
 }
 
+
 .Staffservicepage {
     background-color: rgb(25 25 25);
     overflow: hidden;
+    padding-top: 96px;
 }
 
 .event1 {
