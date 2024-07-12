@@ -70,7 +70,7 @@
     animation-fill-mode: forwards;
 }
 
-.event1 strong, .event7 strong {
+.event1 strong, .even7 strong {
     font-weight: 500;
     background: linear-gradient(106deg, #b9c3ff 12.8%, #d7b8ff 47%);
     background-clip: text;
@@ -88,7 +88,7 @@
     animation-fill-mode: forwards;
 }
 
-.event1 .button1, .event4 .button1, .event6 .button1, .event7 .button1 {
+.event1 .button1, .event4 .button1, .event6 .button1, .even7 .button1 {
     margin: 0rem 2rem 10rem 2rem;
     width: 11rem;
     height: 3rem;
@@ -132,7 +132,7 @@
 .event4 .button1, .event4 .button2{
     margin-top: 3rem;
 }
-.event1 .button1:hover, .event4 .button1:hover, .event6 .button1:hover, .event7 .button1:hover  {
+.event1 .button1:hover, .event4 .button1:hover, .event6 .button1:hover, .even7 .button1:hover  {
     background: linear-gradient(109deg, #7433ff 13.24%, #334fff 92.35%);
 }
 .event1 .button2:hover, .event2 .button2:hover, .event4 .button2:hover {
@@ -140,7 +140,7 @@
     background: linear-gradient(109deg, #7433ff 13.24%, #334fff 92.35%);
 }
 
-.event1 .message, .event2 .message, .event4 .message, .event6 .message, .event7 .button1 {
+.event1 .message, .event2 .message, .event4 .message, .event6 .message, .even7 .button1 {
     font-weight: 600;
     margin: 0 1rem 0 1rem;
     color: white;
@@ -151,7 +151,7 @@
     animation-fill-mode: forwards;
 }
 
-.event1 .inbutton, .event2 .inbutton, .event4 .inbutton, .event6 .inbutton, .event7 .inbutton {
+.event1 .inbutton, .event2 .inbutton, .event4 .inbutton, .event6 .inbutton, .even7 .inbutton {
     color: white;
     opacity: 0;
     animation-name: fade-up;
@@ -226,7 +226,7 @@
     border-radius: 1.2rem;
     background-color: rgba(255, 255, 255, 0.1);
 }
-.event7 .col-2{
+.even7 .col-2{
     margin-top: 2rem;
     font-family: 'UTM Avo';
     color:white;
@@ -235,27 +235,27 @@
     border-radius: 1.2rem;
     background-color: rgba(255, 255, 255, 0.1);
 }
-.event7 h1{
+.even7 h1{
     margin-top: -1rem;
     font-family: 'UTM Avo';
-    font-size: 13.5em;
+    font-size: 11rem;
 }
-.event7 h2{
+.even7 h2{
     font-family: 'UTM Avo';
     font-size: 2.9rem;
     margin-top: -1rem;
 }
-.event7 h3{
+.even7 h3{
     font-family: 'UTM Avo';
     line-height: 6rem;
-    font-size: 16rem;
+    font-size: 12rem;
 }
-.event7 .button1 {
+.even7 .button1 {
     margin-top:1rem;
-    width: 14rem;
+    width: 12rem;
     height: 3;
 }
-.event7 .message {
+.even7 .message {
     padding-right:1rem;
 }
 .event4 h1, .event4 h4, .event4 h5, .event4 li, .event6 h1, .event6 h4{
@@ -298,7 +298,7 @@
     align-items: start;
 }
 
-.event7 {
+.even7 {
     margin-left: clamp(1rem, 4vw, 10rem);
     margin-right: clamp(1rem, 4vw, 10rem);
     opacity: 0;
@@ -307,9 +307,9 @@
     animation-delay: 100ms;
     animation-fill-mode: forwards;
 }
-.event7 h1, .event7 h2{
+.even7 h1, .even7 h2{
     color:white;
 }
-.section-event7{
+.section-even7{
     margin: 14rem 0 10rem 0;
 }

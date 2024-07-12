@@ -10,7 +10,7 @@ const Event7 = () => {
   };
 return(
   <section className="section-event7">
-  <div className="row justify-content-center event7">
+  <div className="row justify-content-center even7">
   <div className="text-center col-6 ">
     <h1>
       Contact
